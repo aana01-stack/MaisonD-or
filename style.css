@@ -1,0 +1,288 @@
+Claro! Vou corrigir e organizar o código para que ele funcione corretamente, incluindo a parte do **CSS** e algumas pequenas melhorias nas páginas HTML. Além disso, vou finalizar o estilo para a galeria de imagens e outras seções. Aqui está o código arrumado e funcional.
+
+### **Estrutura do Projeto**:
+
+* **index.html**: Página inicial
+* **quem-somos.html**: Página sobre a joalheria
+* **contato.html**: Página de contato
+* **cadastro.html**: Página de cadastro
+* **styles.css**: Arquivo CSS
+* **imagens/**: Pasta para armazenar as imagens
+
+---
+
+### 1. **Estrutura HTML**:
+
+#### **index.html** (Página Inicial)
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Maison D'or - Joalheria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Maison D'or</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="galeria">
+            <h2>Nossas Joias</h2>
+            <div class="galeria-imagens">
+                <div class="imagem-item">
+                    <a href="joia1.html">
+                        <img src="imagens/joia1.jpg" alt="Joia 1">
+                        <p class="preco">R$ 2.500,00</p>
+                    </a>
+                </div>
+                <div class="imagem-item">
+                    <a href="joia2.html">
+                        <img src="imagens/joia2.jpg" alt="Joia 2">
+                        <p class="preco">R$ 1.800,00</p>
+                    </a>
+                </div>
+                <div class="imagem-item">
+                    <a href="joia3.html">
+                        <img src="imagens/joia3.jpg" alt="Joia 3">
+                        <p class="preco">R$ 4.000,00</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Maison D'or - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
+```
+
+#### **quem-somos.html** (Página "Quem Somos")
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quem Somos - Maison D'or</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Maison D'or</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sobre a Maison D'or</h2>
+            <p>Maison D'or é uma joalheria de luxo fundada com o objetivo de criar peças exclusivas e sofisticadas para os momentos mais especiais da vida.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Maison D'or - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
+```
+
+#### **contato.html** (Página "Contato")
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contato - Maison D'or</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Maison D'or</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Entre em Contato</h2>
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Maison D'or - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
+```
+
+#### **cadastro.html** (Página "Cadastro")
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro - Maison D'or</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Maison D'or</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Cadastre-se</h2>
+            <form action="#" method="POST">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+                
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Maison D'or - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
+```
+
+---
+
+### 2. **Arquivo CSS**: **styles.css**
+
+```css
+/* Reseta o estilo de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #d4af37; /* Dourado */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Título do logo */
+header .logo h1 {
+    font-size: 1.8em;
+}
+
+/* Menu de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Seção principal */
+main {
+    padding: 20px;
+}
+
+.galeria-imagens {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imagem-item {
+    text-align: center;
+    max-width: 300px;
+}
+
+.imagem-item img {
+   
+```
