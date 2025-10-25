@@ -1,6 +1,15 @@
+/* Reset de estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #f8f8f8;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
     color: #333;
+    line-height: 1.6;
 }
 
 header {
@@ -29,29 +38,95 @@ main {
     padding: 40px;
 }
 
-.contato {
-    max-width: 800px;
-    margin: 0 auto;
+.contato-intro {
     text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
 
-.contato h1 {
+.contato-intro h1 {
     font-size: 36px;
     color: #000;
+    margin-bottom: 20px;
 }
 
-.contato ul {
+.contato-intro p {
+    font-size: 18px;
+    color: #666;
+}
+
+.informacoes {
+    margin-bottom: 40px;
+}
+
+.contato-details, .enderecos {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+ul {
     list-style: none;
+    font-size: 18px;
+    color: #666;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.loja {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin-top: 20px;
 }
 
-.contato li {
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+form button {
+    padding: 10px;
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    border-radius: 8px;
     font-size: 18px;
-    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e6b800;
 }
 
 footer {
