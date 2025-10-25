@@ -1,4 +1,4 @@
-/* Reset de estilos */
+/* Reset de estilo básico */
 * {
     margin: 0;
     padding: 0;
@@ -51,22 +51,46 @@ main {
 .introducao p {
     font-size: 18px;
     color: #666;
+    margin-bottom: 20px;
+}
+
+.imagem-banner {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
 .joias {
+    margin-top: 40px;
+}
+
+.categoria {
+    margin-bottom: 40px;
+}
+
+.categoria h3 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.produtos {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .joia {
-    width: 30%;
+    width: 250px;
     text-align: center;
     border: 1px solid #ddd;
     padding: 20px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .joia img {
