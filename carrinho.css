@@ -1,4 +1,6 @@
-/* Reset de estilo básico */
+/* =====================
+   BASE
+===================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,77 +8,191 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
+    font-family: 'Raleway', sans-serif;
+    background-color: #fdfcf9;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
+/* =====================
+   CABEÇALHO
+===================== */
 header {
-    background-color: #000;
+    background-color: #111;
+    color: #d4af37;
     padding: 20px 0;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #d4af37;
 }
 
 nav ul {
     list-style: none;
-    text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #FFD700; /* Dourado */
-    font-weight: bold;
-    font-size: 18px;
+    color: #f0e6d2;
+    font-weight: 600;
+    font-size: 17px;
+    transition: color 0.3s ease;
 }
 
-main {
-    padding: 40px;
+nav ul li a:hover,
+nav ul li a.ativo {
+    color: #d4af37;
 }
 
-.carrinho {
-    max-width: 800px;
+/* =====================
+   CARRINHO
+===================== */
+.carrinho.container {
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 60px 20px;
 }
 
-h1 {
+.carrinho h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #111;
+    margin-bottom: 30px;
     text-align: center;
-    font-size: 36px;
-    color: #000;
-    margin-bottom: 20px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+table thead {
+    background-color: #111;
+    color: #d4af37;
 }
 
-th, td {
-    padding: 15px;
+table th, table td {
+    padding: 12px 15px;
     text-align: center;
+    border-bottom: 1px solid #ccc;
 }
 
-th {
-    background-color: #000;
-    color: #FFD700;
+table tbody tr:hover {
+    background-color: #f9f7f2;
 }
 
-td {
-    background-color: #f9f9f9;
-}
-
-input[type="number"] {
-    width: 50px;
+.quantidade {
+    width: 60px;
     padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     text-align: center;
-    border-radius: 8px;
-    border: 
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button.remover {
+    background-color: #f44336;
+    color: #fff;
+}
+
+button.remover:hover {
+    background-color: #c53030;
+}
+
+.acoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button.finalizar {
+    background-color: #d4af37;
+    color: #111;
+}
+
+button.finalizar:hover {
+    background-color: #b8952e;
+}
+
+button.continuar {
+    background-color: #111;
+    color: #d4af37;
+}
+
+button.continuar:hover {
+    background-color: #333;
+}
+
+.total {
+    text-align: right;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* =====================
+   RODAPÉ
+===================== */
+footer {
+    background-color: #111;
+    color: #d4af37;
+    text-align: center;
+    padding: 25px 0;
+}
+
+footer .social {
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer .social li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer .social a {
+    color: #f0e6d2;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    color: #d4af37;
+}
+
+/* =====================
+   RESPONSIVIDADE
+===================== */
+@media (max-width: 768px) {
+    .acoes {
+        flex-direction: column;
+    }
+    
+    table th, table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

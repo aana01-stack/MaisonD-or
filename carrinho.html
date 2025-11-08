@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho - Maison D'or</title>
+    <meta name="description" content="Visualize os produtos adicionados ao seu carrinho na Maison D'or e finalize sua compra com segurança.">
+    
+    <!-- Tipografia elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="carrinho.css">
 </head>
 <body>
+    <!-- ================= HEADER ================= -->
     <header>
         <nav>
+            <div class="logo">Maison D’or</div>
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="quem-somos.html">Quem Somos</a></li>
                 <li><a href="contato.html">Contato</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="carrinho.html" class="ativo">Carrinho</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- ================= MAIN ================= -->
     <main>
-        <section class="carrinho">
+        <section class="carrinho container">
             <h1>Seu Carrinho</h1>
             <table>
                 <thead>
@@ -38,14 +45,14 @@
                         <td>R$ 3.000,00</td>
                         <td><input type="number" value="1" min="1" class="quantidade"></td>
                         <td>R$ 3.000,00</td>
-                        <td><button>Remover</button></td>
+                        <td><button class="remover">Remover</button></td>
                     </tr>
                     <tr>
                         <td>Colar de Pérolas</td>
                         <td>R$ 2.200,00</td>
                         <td><input type="number" value="1" min="1" class="quantidade"></td>
                         <td>R$ 2.200,00</td>
-                        <td><button>Remover</button></td>
+                        <td><button class="remover">Remover</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -55,14 +62,19 @@
             </div>
 
             <div class="acoes">
-                <button>Finalizar Compra</button>
-                <button>Continuar Comprando</button>
+                <button class="finalizar">Finalizar Compra</button>
+                <button class="continuar">Continuar Comprando</button>
             </div>
         </section>
     </main>
 
+    <!-- ================= FOOTER ================= -->
     <footer>
-        <p>&copy; 2025 Maison D'or - Todos os direitos reservados</p>
+        <p>&copy; 2025 Maison D'or — Todos os direitos reservados</p>
+        <ul class="social">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ul>
     </footer>
 </body>
 </html>
