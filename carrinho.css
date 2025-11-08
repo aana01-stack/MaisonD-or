@@ -1,6 +1,4 @@
-/* =====================
-   BASE
-===================== */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -9,190 +7,113 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    background-color: #fdfcf9;
+    background-color: #fff;
     color: #333;
-    line-height: 1.7;
 }
 
-/* =====================
-   CABEÇALHO
-===================== */
 header {
-    background-color: #111;
-    color: #d4af37;
-    padding: 20px 0;
-}
-
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px 40px;
+    border-bottom: 1px solid #e3e3e3;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    align-items: center;
 }
-
-.logo {
+header .logo {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
-    color: #d4af37;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #f0e6d2;
-    font-weight: 600;
-    font-size: 17px;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.ativo {
-    color: #d4af37;
-}
-
-/* =====================
-   CARRINHO
-===================== */
-.carrinho.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
-
-.carrinho h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
+    font-weight: 700;
     color: #111;
-    margin-bottom: 30px;
-    text-align: center;
 }
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
-
-table thead {
-    background-color: #111;
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+header nav ul li a.ativo {
     color: #d4af37;
 }
 
-table th, table td {
-    padding: 12px 15px;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
-}
-
-table tbody tr:hover {
-    background-color: #f9f7f2;
-}
-
-.quantidade {
-    width: 60px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+/* Cadastro */
+.cadastro-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: #fafafa;
     text-align: center;
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+.cadastro-container h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.cadastro-container .descricao {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.form-cadastro .campo {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-cadastro .campo label {
+    display: block;
+    margin-bottom: 5px;
     font-weight: 600;
+    color: #333;
+}
+
+.form-cadastro .campo input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-cadastro button {
+    width: 100%;
+    padding: 12px;
+    background-color: #d4af37;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
-button.remover {
-    background-color: #f44336;
-    color: #fff;
+.form-cadastro button:hover {
+    background-color: #b8912e;
 }
 
-button.remover:hover {
-    background-color: #c53030;
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
 }
 
-.acoes {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-button.finalizar {
-    background-color: #d4af37;
-    color: #111;
-}
-
-button.finalizar:hover {
-    background-color: #b8952e;
-}
-
-button.continuar {
-    background-color: #111;
+.login-link a {
     color: #d4af37;
-}
-
-button.continuar:hover {
-    background-color: #333;
-}
-
-.total {
-    text-align: right;
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-/* =====================
-   RODAPÉ
-===================== */
-footer {
-    background-color: #111;
-    color: #d4af37;
-    text-align: center;
-    padding: 25px 0;
-}
-
-footer .social {
-    list-style: none;
-    margin-top: 10px;
-}
-
-footer .social li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-footer .social a {
-    color: #f0e6d2;
     text-decoration: none;
+    font-weight: 600;
 }
 
-footer .social a:hover {
-    color: #d4af37;
-}
-
-/* =====================
-   RESPONSIVIDADE
-===================== */
-@media (max-width: 768px) {
-    .acoes {
-        flex-direction: column;
-    }
-    
-    table th, table td {
-        padding: 8px;
-        font-size: 14px;
-    }
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    margin-top: 50px;
+    color: #777;
 }
