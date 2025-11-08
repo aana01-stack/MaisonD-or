@@ -1,4 +1,6 @@
-/* Reset de estilo básico */
+/* =====================
+   BASE
+===================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,132 +8,199 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
+    font-family: 'Raleway', sans-serif;
+    background-color: #fdfcf9;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
+/* =====================
+   CABEÇALHO
+===================== */
 header {
-    background-color: #000;
+    background-color: #111;
+    color: #d4af37;
     padding: 20px 0;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #d4af37;
 }
 
 nav ul {
     list-style: none;
-    text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #FFD700; /* Dourado */
-    font-weight: bold;
-    font-size: 18px;
+    color: #f0e6d2;
+    font-weight: 600;
+    font-size: 17px;
+    transition: color 0.3s ease;
 }
 
-main {
-    padding: 40px;
+nav ul li a:hover,
+nav ul li a.ativo {
+    color: #d4af37;
+}
+
+/* =====================
+   SEÇÕES
+===================== */
+section {
+    padding: 60px 20px;
 }
 
 .contato-intro {
     text-align: center;
-    margin-bottom: 40px;
 }
 
 .contato-intro h1 {
-    font-size: 36px;
-    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #111;
     margin-bottom: 20px;
 }
 
 .contato-intro p {
+    max-width: 800px;
+    margin: 0 auto;
     font-size: 18px;
-    color: #666;
+    color: #555;
 }
 
-.informacoes {
-    margin-bottom: 40px;
+.informacoes .container.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contato-details, .enderecos {
-    margin-bottom: 40px;
+    flex: 1 1 400px;
 }
 
 h2 {
-    font-size: 28px;
-    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
     margin-bottom: 20px;
+    color: #111;
 }
 
-ul {
+.contato-details ul {
     list-style: none;
-    font-size: 18px;
-    color: #666;
 }
 
-ul li {
+.contato-details li {
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
-a {
+.contato-details a {
+    color: #d4af37;
     text-decoration: none;
-    color: #FFD700;
-    font-weight: bold;
 }
 
-.loja {
-    margin-bottom: 20px;
+.contato-details a:hover {
+    text-decoration: underline;
 }
 
-form {
+.enderecos .loja {
+    margin-bottom: 30px;
+    padding-left: 10px;
+    border-left: 4px solid #d4af37;
+}
+
+/* FORMULÁRIO */
+.formulario-contato form {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 20px;
 }
 
-form div {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    font-size: 16px;
+.formulario-contato label {
+    font-weight: 600;
     margin-bottom: 5px;
-    color: #333;
 }
 
-form input, form textarea {
+.formulario-contato input,
+.formulario-contato textarea {
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 16px;
-    color: #333;
+    width: 100%;
 }
 
-form button {
-    padding: 10px;
-    background-color: #FFD700;
-    color: #000;
+.formulario-contato button {
+    padding: 12px;
+    background-color: #d4af37;
+    color: #111;
     border: none;
-    border-radius: 8px;
-    font-size: 18px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease;
+    border-radius: 5px;
 }
 
-form button:hover {
-    background-color: #e6b800;
+.formulario-contato button:hover {
+    background-color: #b8952e;
 }
 
+/* =====================
+   RODAPÉ
+===================== */
 footer {
+    background-color: #111;
+    color: #d4af37;
     text-align: center;
-    padding: 20px;
-    background-color: #000;
-    color: #FFD700;
+    padding: 25px 0;
+}
+
+footer .social {
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer .social li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer .social a {
+    color: #f0e6d2;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    color: #d4af37;
+}
+
+/* =====================
+   RESPONSIVIDADE
+===================== */
+@media (max-width: 768px) {
+    .informacoes .container.flex {
+        flex-direction: column;
+    }
 }
