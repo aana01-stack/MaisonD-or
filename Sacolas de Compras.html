@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacola - Maison D'or</title>
+    <meta name="description" content="Visualize os produtos adicionados à sua sacola na Maison D'or e finalize sua compra com segurança.">
+    
+    <!-- Tipografia elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Sacola de Compras.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Maison D’or</div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="Sacola de Compras.html" class="ativo">Sacola</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sacola container">
+            <h1>Sua Sacola</h1>
+            
+            <div class="produto">
+                <img src="images/anel.jpg" alt="Anel Solitário">
+                <div class="detalhes">
+                    <h2>Anel Solitário</h2>
+                    <p class="preco">R$ 3.000,00</p>
+                    <div class="quantidade">
+                        <label>Quantidade:</label>
+                        <input type="number" value="1" min="1">
+                    </div>
+                    <button class="remover">Remover</button>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="images/colar.jpg" alt="Colar de Pérolas">
+                <div class="detalhes">
+                    <h2>Colar de Pérolas</h2>
+                    <p class="preco">R$ 2.200,00</p>
+                    <div class="quantidade">
+                        <label>Quantidade:</label>
+                        <input type="number" value="1" min="1">
+                    </div>
+                    <button class="remover">Remover</button>
+                </div>
+            </div>
+
+            <div class="total">
+                <p>Total: <strong>R$ 5.200,00</strong></p>
+            </div>
+
+            <div class="acoes">
+                <button class="finalizar">Finalizar Compra</button>
+                <button class="continuar">Continuar Comprando</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Maison D'or — Todos os direitos reservados</p>
+        <ul class="social">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

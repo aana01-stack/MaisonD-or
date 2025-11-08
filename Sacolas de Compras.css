@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    background-color: #f9f9f9;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+header .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #111;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+header nav ul li a.ativo {
+    color: #d4af37;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.produto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: #fafafa;
+    gap: 20px;
+}
+
+.produto img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.detalhes h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.detalhes .preco {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.quantidade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.quantidade input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.remover {
+    background-color: #fff;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.remover:hover {
+    background-color: #d4af37;
+    color: #fff;
+}
+
+.total {
+    text-align: right;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.finalizar, .continuar {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.finalizar {
+    background-color: #d4af37;
+    color: #fff;
+}
+
+.finalizar:hover {
+    background-color: #b8912e;
+}
+
+.continuar {
+    background-color: #fff;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+}
+
+.continuar:hover {
+    background-color: #d4af37;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    margin-top: 50px;
+    color: #777;
+}
+
+footer .social {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+footer .social li a {
+    text-decoration: none;
+    color: #d4af37;
+}
