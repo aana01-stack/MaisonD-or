@@ -1,4 +1,6 @@
-/* Reset de estilo básico */
+/* =====================
+   BASE GERAL
+===================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,102 +8,175 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
+    font-family: 'Raleway', sans-serif;
+    background-color: #fdfcf9;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
+/* =====================
+   CABEÇALHO
+===================== */
 header {
-    background-color: #000;
+    background-color: #111;
+    color: #d4af37;
     padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #d4af37;
 }
 
 nav ul {
     list-style: none;
-    text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #FFD700; /* Dourado */
-    font-weight: bold;
-    font-size: 18px;
+    color: #f0e6d2;
+    font-weight: 600;
+    font-size: 17px;
+    transition: color 0.3s ease;
 }
 
-main {
-    padding: 40px;
+nav ul li a:hover,
+nav ul li a.ativo {
+    color: #d4af37;
 }
 
+/* =====================
+   SEÇÕES
+===================== */
 .introducao {
     text-align: center;
-    margin-bottom: 40px;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #fffdf7, #f7f4ed);
 }
 
 .introducao h1 {
-    font-size: 36px;
-    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #111;
     margin-bottom: 20px;
 }
 
 .introducao p {
+    max-width: 800px;
+    margin: 0 auto 30px;
     font-size: 18px;
-    color: #666;
-    margin-bottom: 20px;
+    color: #555;
 }
 
 .imagem-introducao {
     width: 100%;
-    max-width: 800px;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 8px;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-.historia, .nossa-missao, .valores {
-    background-color: #fff;
-    padding: 40px;
-    margin-bottom: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* HISTÓRIA, MISSÃO, VALORES */
+section {
+    padding: 60px 20px;
 }
 
-.historia h2, .nossa-missao h2, .valores h2 {
-    font-size: 30px;
-    color: #000;
-    margin-bottom: 20px;
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #111;
+    text-align: center;
+    margin-bottom: 25px;
 }
 
-.historia p, .nossa-missao p, .valores p {
+section p,
+section li {
     font-size: 18px;
-    color: #666;
-    margin-bottom: 20px;
+    color: #444;
+    max-width: 900px;
+    margin: 10px auto;
 }
 
 .imagem-historia {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 8px;
+    display: block;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
+.valores ul {
+    list-style: none;
+    padding-left: 0;
 }
 
+.valores li {
+    margin-bottom: 15px;
+    border-left: 4px solid #d4af37;
+    padding-left: 15px;
+}
+
+/* =====================
+   RODAPÉ
+===================== */
 footer {
+    background-color: #111;
+    color: #d4af37;
     text-align: center;
-    padding: 20px;
-    background-color: #000;
-    color: #FFD700;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 25px 0;
+}
+
+footer .social {
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer .social li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer .social a {
+    color: #f0e6d2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer .social a:hover {
+    color: #d4af37;
+}
+
+/* =====================
+   RESPONSIVIDADE
+===================== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section p, section li {
+        font-size: 16px;
+        padding: 0 10px;
+    }
 }
