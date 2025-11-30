@@ -1,4 +1,6 @@
-/* Reset básico */
+/* =====================
+   RESET E BASE
+===================== */
 * {
     margin: 0;
     padding: 0;
@@ -7,67 +9,85 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    background-color: #fff;
+    background-color: #fdfcf9;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
+/* =====================
+   HEADER PADRONIZADO
+===================== */
 header {
-    background-color: #f9f9f9;
-    padding: 20px 40px;
+    background-color: #111;
+    padding: 20px 0;
+    color: #d4af37;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #eee;
 }
 
-header .logo {
+.logo {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
-    font-weight: 700;
-    color: #111;
+    color: #d4af37;
 }
 
-header nav ul {
+nav ul {
     list-style: none;
     display: flex;
     gap: 25px;
 }
 
-header nav ul li a {
+nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #f0e6d2;
     font-weight: 600;
+    font-size: 17px;
+    transition: 0.3s ease;
 }
 
-header nav ul li a.ativo {
+nav ul li a:hover,
+nav ul li a.ativo {
     color: #d4af37;
 }
 
-/* ================== Formulário ================== */
+/* =====================
+   CONTAINER DE CADASTRO
+===================== */
 .cadastro-container {
+    background: #ffffff;
     max-width: 500px;
-    margin: 50px auto;
+    margin: 60px auto;
     padding: 40px 30px;
-    border: 1px solid #eee;
     border-radius: 12px;
-    background-color: #fafafa;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid #d4af37;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     text-align: center;
 }
 
 .cadastro-container h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: 36px;
+    color: #111;
     margin-bottom: 10px;
 }
 
 .cadastro-container .descricao {
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
     margin-bottom: 30px;
+    line-height: 1.6;
 }
 
+/* =====================
+   FORMULÁRIO
+===================== */
 .form-cadastro .campo {
     display: flex;
     flex-direction: column;
@@ -76,44 +96,48 @@ header nav ul li a.ativo {
 }
 
 .form-cadastro .campo label {
-    margin-bottom: 5px;
     font-weight: 600;
-    color: #333;
+    margin-bottom: 5px;
+    color: #111;
 }
 
 .form-cadastro .campo input {
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: all 0.3s ease;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #fff;
+    transition: 0.3s ease;
 }
 
 .form-cadastro .campo input:focus {
     border-color: #d4af37;
     outline: none;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
 }
 
+/* BOTÃO */
 .form-cadastro button {
     width: 100%;
     padding: 14px;
-    border: none;
-    border-radius: 8px;
     background-color: #d4af37;
-    color: #fff;
-    font-weight: 600;
+    color: #111;
+    font-weight: 700;
     font-size: 16px;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .form-cadastro button:hover {
-    background-color: #b8912e;
+    background-color: #b8942f;
 }
 
+/* LINK LOGIN */
 .login-link {
     margin-top: 15px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .login-link a {
@@ -126,11 +150,13 @@ header nav ul li a.ativo {
     text-decoration: underline;
 }
 
-/* ================== Footer ================== */
+/* =====================
+   FOOTER
+===================== */
 footer {
+    background-color: #111;
+    padding: 25px 0;
     text-align: center;
-    padding: 20px 0;
-    background-color: #f9f9f9;
-    margin-top: 50px;
-    color: #777;
+    color: #d4af37;
+    margin-top: 60px;
 }
