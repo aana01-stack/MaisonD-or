@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <!-- ================= HEADER ================= -->
+    <!-- HEADER -->
     <header>
         <nav>
             <div class="logo">Maison D’or</div>
@@ -26,7 +26,7 @@
         </nav>
     </header>
 
-    <!-- ================= MAIN ================= -->
+    <!-- MAIN -->
     <main>
         <!-- INTRODUÇÃO -->
         <section class="introducao">
@@ -45,15 +45,15 @@
                 <h3>Anéis</h3>
                 <div class="produtos">
                     <div class="joia">
-                        <img src="Anel solitario.jpg" alt="Anel Solitário  De Diamente Maison D'or">
-                        <p>Anel Solitário De Diamente<br><strong>R$ 70.000,00</strong></p>
-                        <a href="joia-detalhes.html" class="botao">Ver Detalhes</a>
+                        <img src="Anel solitario.jpg" alt="Anel Solitário Maison D'or">
+                        <p>Anel Solitário De Diamante<br><strong>R$ 70.000,00</strong></p>
+                        <a class="botao" onclick="abrirModal('solitario')">Ver Detalhes</a>
                     </div>
 
                     <div class="joia">
-                        <img src="esmerealda.jpg" alt="Anel de Esmeralda Colombiana + Diamante ao redor Maison D'or">
+                        <img src="esmerealda.jpg" alt="Anel Esmeralda Maison D'or">
                         <p>Anel de Esmeralda Colombiana e Diamante ao redor<br><strong>R$ 70.000,00</strong></p>
-                        <a href="joia-detalhes.html" class="botao">Ver Detalhes</a>
+                        <a class="botao" onclick="abrirModal('esmeralda')">Ver Detalhes</a>
                     </div>
                 </div>
             </div>
@@ -63,15 +63,15 @@
                 <h3>Colares</h3>
                 <div class="produtos">
                     <div class="joia">
-                        <img src="safira.jpg" alt="Colar de Diamante Safira Maison D'or">
+                        <img src="safira.jpg" alt="Colar Pérolas Maison D'or">
                         <p>Colar de Pérolas<br><strong>R$ 2.200,00</strong></p>
-                        <a href="joia-detalhes.html" class="botao">Ver Detalhes</a>
+                        <a class="botao" onclick="abrirModal('perolas')">Ver Detalhes</a>
                     </div>
 
                     <div class="joia">
-                        <img src="images/colares2.jpg" alt="Colar de Ouro Maison D'or">
+                        <img src="images/colares2.jpg" alt="Colar Ouro Maison D'or">
                         <p>Colar de Ouro<br><strong>R$ 3.800,00</strong></p>
-                        <a href="joia-detalhes.html" class="botao">Ver Detalhes</a>
+                        <a class="botao" onclick="abrirModal('ouro')">Ver Detalhes</a>
                     </div>
                 </div>
             </div>
@@ -81,22 +81,22 @@
                 <h3>Pulseiras</h3>
                 <div class="produtos">
                     <div class="joia">
-                        <img src="images/pulseira1.jpg" alt="Pulseira de Diamante Maison D'or">
+                        <img src="images/pulseira1.jpg" alt="Pulseira Diamante Maison D'or">
                         <p>Pulseira de Diamante<br><strong>R$ 2.800,00</strong></p>
-                        <a href="joia-detalhes.html" class="botao">Ver Detalhes</a>
+                        <a class="botao" onclick="abrirModal('pulseira1')">Ver Detalhes</a>
                     </div>
 
                     <div class="joia">
-                        <img src="images/pulseira2.jpg" alt="Pulseira de Ouro Maison D'or">
+                        <img src="images/pulseira2.jpg" alt="Pulseira Ouro Maison D'or">
                         <p>Pulseira de Ouro<br><strong>R$ 1.600,00</strong></p>
-                        <a href="joia-detalhes.html" class="botao">Ver Detalhes</a>
+                        <a class="botao" onclick="abrirModal('pulseira2')">Ver Detalhes</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- ================= FOOTER ================= -->
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2025 Maison D'or — Todos os direitos reservados</p>
         <ul class="social">
@@ -104,5 +104,79 @@
             <li><a href="#">Facebook</a></li>
         </ul>
     </footer>
+
+    <!-- ================= MODAL ================= -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="fechar">&times;</span>
+
+            <h2 id="modal-titulo"></h2>
+            <img id="modal-imagem" class="modal-img">
+            <p id="modal-descricao"></p>
+            <p id="modal-preco" class="modal-preco"></p>
+        </div>
+    </div>
+
+    <!-- ================= SCRIPT DO MODAL ================= -->
+    <script>
+        const joias = {
+            "solitario": {
+                titulo: "Anel Solitário de Diamante",
+                imagem: "Anel solitario.jpg",
+                descricao: "Um solitário clássico com diamante lapidação brilhante.",
+                preco: "R$ 70.000,00"
+            },
+            "esmeralda": {
+                titulo: "Anel de Esmeralda Colombiana",
+                imagem: "esmerealda.jpg",
+                descricao: "Esmeralda colombiana legítima com diamantes ao redor.",
+                preco: "R$ 70.000,00"
+            },
+            "perolas": {
+                titulo: "Colar de Pérolas",
+                imagem: "safira.jpg",
+                descricao: "Colar clássico de pérolas naturais.",
+                preco: "R$ 2.200,00"
+            },
+            "ouro": {
+                titulo: "Colar de Ouro 18k",
+                imagem: "images/colares2.jpg",
+                descricao: "Elegante colar de ouro maciço 18k.",
+                preco: "R$ 3.800,00"
+            },
+            "pulseira1": {
+                titulo: "Pulseira de Diamante",
+                imagem: "images/pulseira1.jpg",
+                descricao: "Pulseira fina cravejada de diamantes.",
+                preco: "R$ 2.800,00"
+            },
+            "pulseira2": {
+                titulo: "Pulseira de Ouro",
+                imagem: "images/pulseira2.jpg",
+                descricao: "Pulseira clássica em ouro 18k.",
+                preco: "R$ 1.600,00"
+            }
+        };
+
+        function abrirModal(id) {
+            const item = joias[id];
+            document.getElementById("modal").style.display = "block";
+            document.getElementById("modal-titulo").textContent = item.titulo;
+            document.getElementById("modal-imagem").src = item.imagem;
+            document.getElementById("modal-descricao").textContent = item.descricao;
+            document.getElementById("modal-preco").textContent = item.preco;
+        }
+
+        document.querySelector(".fechar").onclick = () => {
+            document.getElementById("modal").style.display = "none";
+        };
+
+        window.onclick = (event) => {
+            if (event.target === document.getElementById("modal")) {
+                document.getElementById("modal").style.display = "none";
+            }
+        };
+    </script>
+
 </body>
 </html>
