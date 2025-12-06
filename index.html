@@ -53,6 +53,20 @@
                         <p>Anel de Esmeralda Colombiana e Diamante ao redor<br><strong>R$ 70.000,00</strong></p>
                         <a class="botao" onclick="abrirModal('esmeralda')">Ver Detalhes</a>
                     </div>
+
+                    <!-- NOVO ANEL -->
+                    <div class="joia">
+                        <img src="anel3.jpg" alt="Anel de Safira Maison D'or">
+                        <p>Anel de Safira com Diamantes<br><strong>R$ 75.000,00</strong></p>
+                        <a class="botao" onclick="abrirModal('safira')">Ver Detalhes</a>
+                    </div>
+
+                    <!-- NOVO ANEL -->
+                    <div class="joia">
+                        <img src="anel4.jpg" alt="Anel de Rubi Maison D'or">
+                        <p>Anel de Rubi com Diamantes<br><strong>R$ 80.000,00</strong></p>
+                        <a class="botao" onclick="abrirModal('rubi')">Ver Detalhes</a>
+                    </div>
                 </div>
             </div>
 
@@ -70,6 +84,27 @@
                         <img src="images/colares2.jpg" alt="Colar Ouro Maison D'or">
                         <p>Colar de Ouro<br><strong>R$ 3.800,00</strong></p>
                         <a class="botao" onclick="abrirModal('ouro')">Ver Detalhes</a>
+                    </div>
+
+                    <!-- NOVO COLAR -->
+                    <div class="joia">
+                        <img src="colar3.jpg" alt="Colar de Esmeralda Maison D'or">
+                        <p>Colar de Esmeralda e Ouro 18k<br><strong>R$ 8.500,00</strong></p>
+                        <a class="botao" onclick="abrirModal('esmeralda-colar')">Ver Detalhes</a>
+                    </div>
+
+                    <!-- NOVO COLAR -->
+                    <div class="joia">
+                        <img src="colar4.jpg" alt="Colar de Diamantes Maison D'or">
+                        <p>Colar de Diamantes<br><strong>R$ 25.000,00</strong></p>
+                        <a class="botao" onclick="abrirModal('diamantes-colar')">Ver Detalhes</a>
+                    </div>
+
+                    <!-- NOVO COLAR -->
+                    <div class="joia">
+                        <img src="colar5.jpg" alt="Colar de Rubi Maison D'or">
+                        <p>Colar de Rubi com Diamantes<br><strong>R$ 18.000,00</strong></p>
+                        <a class="botao" onclick="abrirModal('rubi-colar')">Ver Detalhes</a>
                     </div>
                 </div>
             </div>
@@ -146,32 +181,4 @@
                 descricao: "Pulseira fina cravejada de diamantes.",
                 preco: "R$ 2.800,00"
             },
-            "pulseira2": {
-                titulo: "Pulseira de Ouro",
-                imagem: "images/pulseira2.jpg",
-                descricao: "Pulseira clássica em ouro 18k.",
-                preco: "R$ 1.600,00"
-            }
-        };
-
-        function abrirModal(id) {
-            const item = joias[id];
-            document.getElementById("modal").style.display = "block";
-            document.getElementById("modal-titulo").textContent = item.titulo;
-            document.getElementById("modal-imagem").src = item.imagem;
-            document.getElementById("modal-descricao").textContent = item.descricao;
-            document.getElementById("modal-preco").textContent = item.preco;
-        }
-
-        document.querySelector(".fechar").onclick = () => {
-            document.getElementById("modal").style.display = "none";
-        };
-
-        window.onclick = (event) => {
-            if (event.target === document.getElementById("modal")) {
-                document.getElementById("modal").style.display = "none";
-            }
-        };
-    </script>
-</body>
-</html>
+            "pulseira2
