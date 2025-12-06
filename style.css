@@ -37,6 +37,7 @@ nav {
     font-size: 30px;
     color: #d4af37;
     letter-spacing: 1.5px;
+    cursor: pointer;
 }
 
 nav ul {
@@ -69,7 +70,7 @@ nav ul li a.ativo {
     padding: 80px 20px;
     background: linear-gradient(to bottom, #ffffff, #f3f3f3);
     position: relative;
-    z-index: 1; /* IMPORTANTE para evitar bloquear cliques */
+    z-index: 1;
 }
 
 .introducao h1 {
@@ -94,7 +95,6 @@ nav ul li a.ativo {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    z-index: 5; /* deixa clicável */
 }
 
 .joias h2 {
@@ -178,8 +178,6 @@ nav ul li a.ativo {
     cursor: pointer;
     text-decoration: none;
     transition: 0.3s ease;
-    z-index: 10;
-    position: relative;
 }
 
 .botao:hover {
@@ -281,6 +279,11 @@ footer .social a:hover {
         gap: 15px;
     }
 
+    .logo {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
     .produtos {
         flex-direction: column;
         align-items: center;
@@ -288,5 +291,11 @@ footer .social a:hover {
 
     .joia {
         width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 15px;
     }
 }
