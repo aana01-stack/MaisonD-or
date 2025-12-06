@@ -125,17 +125,18 @@ nav ul li a.ativo {
     color: #333;
 }
 
+/* PRODUTOS */
 .produtos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Ajusta a grid para o tamanho desejado */
     gap: 25px;
+    justify-items: center;
 }
 
 /* ====== CARD DE PRODUTO ====== */
 .joia {
     background: #fff;
-    width: 260px;
+    width: 100%; /* Agora ocupa 100% da célula da grid */
     padding: 20px;
     border-radius: 12px;
     text-align: center;
@@ -143,6 +144,9 @@ nav ul li a.ativo {
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     transition: 0.3s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .joia:hover {
@@ -152,6 +156,8 @@ nav ul li a.ativo {
 
 .joia img {
     width: 100%;
+    height: 200px; /* Altura fixada para uniformizar */
+    object-fit: cover; /* Garante que a imagem ocupe todo o espaço sem deformar */
     border-radius: 8px;
     margin-bottom: 15px;
     transition: 0.3s ease;
@@ -285,12 +291,11 @@ footer .social a:hover {
     }
 
     .produtos {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr 1fr; /* Menos colunas em dispositivos menores */
     }
 
     .joia {
-        width: 90%;
+        width: 100%;
         margin-bottom: 20px;
     }
 
