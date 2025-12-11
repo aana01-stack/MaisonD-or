@@ -69,8 +69,6 @@ nav ul li a.ativo {
     text-align: center;
     padding: 80px 20px;
     background: linear-gradient(to bottom, #ffffff, #f3f3f3);
-    position: relative;
-    z-index: 1;
 }
 
 .introducao h1 {
@@ -94,7 +92,6 @@ nav ul li a.ativo {
     padding: 70px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
 }
 
 .joias h2 {
@@ -125,28 +122,34 @@ nav ul li a.ativo {
     color: #333;
 }
 
-/* PRODUTOS */
+/* ===========================
+   PRODUTOS (GRID)
+=========================== */
 .produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Ajusta a grid para o tamanho desejado */
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 25px;
     justify-items: center;
 }
 
-/* ====== CARD DE PRODUTO ====== */
+/* CENTRALIZAR SOMENTE PULSEIRAS E RELÓGIOS */
+.categoria:nth-of-type(3) .produtos,
+.categoria:nth-of-type(4) .produtos {
+    justify-content: center;
+}
+
+/* ===========================
+   CARD DE PRODUTO
+=========================== */
 .joia {
     background: #fff;
-    width: 100%; /* Agora ocupa 100% da célula da grid */
+    width: 100%;
     padding: 20px;
     border-radius: 12px;
     text-align: center;
     border-top: 3px solid #d4af37;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     transition: 0.3s ease;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .joia:hover {
@@ -156,8 +159,8 @@ nav ul li a.ativo {
 
 .joia img {
     width: 100%;
-    height: 200px; /* Altura fixada para uniformizar */
-    object-fit: cover; /* Garante que a imagem ocupe todo o espaço sem deformar */
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
     transition: 0.3s ease;
@@ -173,7 +176,7 @@ nav ul li a.ativo {
     margin-bottom: 15px;
 }
 
-/* BOTÕES */
+/* BOTÃO */
 .botao {
     display: inline-block;
     background-color: #d4af37;
@@ -280,6 +283,7 @@ footer .social a:hover {
    RESPONSIVO
 =========================== */
 @media (max-width: 768px) {
+
     nav {
         flex-direction: column;
         gap: 15px;
@@ -291,7 +295,7 @@ footer .social a:hover {
     }
 
     .produtos {
-        grid-template-columns: 1fr 1fr; /* Menos colunas em dispositivos menores */
+        grid-template-columns: 1fr 1fr;
     }
 
     .joia {
