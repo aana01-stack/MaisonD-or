@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- HEADER -->
     <header>
         <nav>
@@ -27,7 +26,6 @@
 
     <!-- MAIN -->
     <main>
-
         <!-- INTRODUÇÃO -->
         <section class="introducao">
             <div class="intro-content">
@@ -56,12 +54,14 @@
                         <a class="botao" onclick="abrirModal('esmeralda')">Ver Detalhes</a>
                     </div>
 
+                    <!-- NOVO ANEL -->
                     <div class="joia">
                         <img src="dia.jpg" alt="Anel de Safira Maison D'or">
                         <p>Anel de Safira com Diamantes<br><strong>R$ 75.000,00</strong></p>
                         <a class="botao" onclick="abrirModal('safira')">Ver Detalhes</a>
                     </div>
 
+                    <!-- NOVO ANEL -->
                     <div class="joia">
                         <img src="anel4.jpg" alt="Anel de Rubi Maison D'or">
                         <p>Anel de Rubi com Diamantes<br><strong>R$ 80.000,00</strong></p>
@@ -86,12 +86,14 @@
                         <a class="botao" onclick="abrirModal('ouro')">Ver Detalhes</a>
                     </div>
 
+                    <!-- NOVO COLAR -->
                     <div class="joia">
                         <img src="colar3.jpg" alt="Colar de Esmeralda Maison D'or">
                         <p>Colar de Esmeralda e Ouro 18k<br><strong>R$ 8.500,00</strong></p>
                         <a class="botao" onclick="abrirModal('esmeralda-colar')">Ver Detalhes</a>
                     </div>
 
+                    <!-- NOVO COLAR -->
                     <div class="joia">
                         <img src="colar5.jpg" alt="Colar de Rubi Maison D'or">
                         <p>Colar de Rubi com Diamantes<br><strong>R$ 18.000,00</strong></p>
@@ -100,12 +102,10 @@
                 </div>
             </div>
 
-            <!-- CATEGORIA: PULSEIRAS E RELÓGIOS -->
+            <!-- CATEGORIA: PULSEIRAS -->
             <div class="categoria">
-                <h3 style="text-align:center;">Pulseiras & Relógios</h3>
-
-                <div class="produtos" style="justify-content: center; display: flex; flex-wrap: wrap; gap: 30px;">
-
+                <h3>Pulseiras</h3>
+                <div class="produtos">
                     <div class="joia">
                         <img src="images/pulseira1.jpg" alt="Pulseira Diamante Maison D'or">
                         <p>Pulseira de Diamante<br><strong>R$ 2.800,00</strong></p>
@@ -117,22 +117,8 @@
                         <p>Pulseira de Ouro<br><strong>R$ 1.600,00</strong></p>
                         <a class="botao" onclick="abrirModal('pulseira2')">Ver Detalhes</a>
                     </div>
-
-                    <div class="joia">
-                        <img src="relogio1.jpg" alt="Relógio de Ouro 18k Masculino">
-                        <p>Relógio de Ouro 18k Masculino<br><strong>R$ 25.000,00</strong></p>
-                        <a class="botao" onclick="abrirModal('relogio1')">Ver Detalhes</a>
-                    </div>
-
-                    <div class="joia">
-                        <img src="relogio2.jpg" alt="Relógio Feminino com Diamantes">
-                        <p>Relógio Feminino com Diamantes<br><strong>R$ 32.000,00</strong></p>
-                        <a class="botao" onclick="abrirModal('relogio2')">Ver Detalhes</a>
-                    </div>
-
                 </div>
             </div>
-
         </section>
     </main>
 
@@ -170,23 +156,11 @@
                 descricao: "Esmeralda colombiana legítima com diamantes ao redor.",
                 preco: "R$ 70.000,00"
             },
-            "safira": {
-                titulo: "Anel de Safira com Diamantes",
-                imagem: "dia.jpg",
-                descricao: "Safira azul preciosa com diamantes laterais.",
-                preco: "R$ 75.000,00"
-            },
-            "rubi": {
-                titulo: "Anel de Rubi com Diamantes",
-                imagem: "anel4.jpg",
-                descricao: "Rubi birmano intenso com halo de diamantes.",
-                preco: "R$ 80.000,00"
-            },
             "perolas": {
                 titulo: "Colar de Pérolas",
                 imagem: "safira.jpg",
                 descricao: "Colar clássico de pérolas naturais.",
-                preco: "R$ 2.200,00"
+                preco: "R$ 30.000,00"
             },
             "ouro": {
                 titulo: "Colar de Ouro 18k",
@@ -194,66 +168,9 @@
                 descricao: "Elegante colar de ouro maciço 18k.",
                 preco: "R$ 3.800,00"
             },
-            "esmeralda-colar": {
-                titulo: "Colar de Esmeralda e Ouro 18k",
-                imagem: "colar3.jpg",
-                descricao: "Magnífico colar de esmeralda legítima em ouro 18k.",
-                preco: "R$ 8.500,00"
-            },
-            "rubi-colar": {
-                titulo: "Colar de Rubi com Diamantes",
-                imagem: "colar5.jpg",
-                descricao: "Colar imponente com rubi central e diamantes.",
-                preco: "R$ 18.000,00"
-            },
             "pulseira1": {
                 titulo: "Pulseira de Diamante",
                 imagem: "images/pulseira1.jpg",
                 descricao: "Pulseira fina cravejada de diamantes.",
                 preco: "R$ 2.800,00"
-            },
-            "pulseira2": {
-                titulo: "Pulseira de Ouro",
-                imagem: "images/pulseira2.jpg",
-                descricao: "Pulseira de ouro maciço trabalhado.",
-                preco: "R$ 1.600,00"
-            },
-            "relogio1": {
-                titulo: "Relógio de Ouro 18k Masculino",
-                imagem: "relogio1.jpg",
-                descricao: "Relógio masculino luxuoso produzido em ouro 18k.",
-                preco: "R$ 25.000,00"
-            },
-            "relogio2": {
-                titulo: "Relógio Feminino com Diamantes",
-                imagem: "relogio2.jpg",
-                descricao: "Elegante relógio feminino adornado com diamantes naturais.",
-                preco: "R$ 32.000,00"
-            }
-        };
-
-        function abrirModal(id) {
-            const item = joias[id];
-            if (!item) return;
-
-            document.getElementById("modal-titulo").innerText = item.titulo;
-            document.getElementById("modal-imagem").src = item.imagem;
-            document.getElementById("modal-descricao").innerText = item.descricao;
-            document.getElementById("modal-preco").innerText = item.preco;
-
-            document.getElementById("modal").style.display = "block";
-        }
-
-        document.querySelector(".fechar").onclick = function () {
-            document.getElementById("modal").style.display = "none";
-        };
-
-        window.onclick = function (event) {
-            if (event.target == document.getElementById("modal")) {
-                document.getElementById("modal").style.display = "none";
-            }
-        };
-    </script>
-
-</body>
-</html>
+            }                                 
